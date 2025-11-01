@@ -13,7 +13,7 @@ function Sidebar({ isOpen, closebar }) {
       }}
     >
       <button className="closebtn my-4" onClick={closebar}>×</button>
-      <Link to="/about" style = {{marginTop : "25px"}}>📊 About Us</Link>
+      <Link to="/login/warehouse" style = {{marginTop : "25px"}}>📊 About Us</Link>
       <Link to="/login/warehouse">🏢 Warehouses</Link>
       <Link to="/login/products">📦 Products</Link>
       <Link to="/login/statistics">📈 Statistics</Link>

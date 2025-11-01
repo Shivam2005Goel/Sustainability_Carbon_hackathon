@@ -1,26 +1,30 @@
-import express from "express"
-import cors from "cors"
-import dotenv from "dotenv"
-import pool from "./config/db.js"
-import authRoutes from "./routes/auth.js"
-import warehouseRoutes from "./routes/warehouse.js"
-import directionsRoute from "./routes/direction.js"
-import productsRoute from "./routes/products.js"
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import pool from "./config/db.js";
+import authRoutes from "./routes/auth.js";
+import warehouseRoutes from "./routes/warehouse.js";
+import directionsRoute from "./routes/direction.js";
+import productsRoute from "./routes/products.js";
 import { exec } from "child_process";
+import path from "path";
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/",async (req,res)=>{
-   const result = await pool.query("SELECT current_database()");
-   res.send(`Database name is : ${result.rows[0].current_database}`);
-})
-
+// ✅ API routes
+app.get("/", async (req, res) => {
+  const result = await pool.query("SELECT current_database()");
+  res.send(`Database name is : ${result.rows[0].current_database}`);
+});
 
 app.post("/optimize-route", (req, res) => {
   const { start, end } = req.body;
-  if (!start || !end) return res.status(400).json({ error: "Start and End are required" });
+  if (!start || !end)
+    return res.status(400).json({ error: "Start and End are required" });
 
   exec(`python optimizer.py "${start}" "${end}"`, (err, stdout, stderr) => {
     if (err) {
@@ -38,14 +42,23 @@ app.post("/optimize-route", (req, res) => {
   });
 });
 
+app.use("/api/auth", authRoutes);
+app.use("/warehouse", warehouseRoutes);
+app.use("/products", productsRoute);
+app.use("/api/directions", directionsRoute);
 
-app.use('/api/auth', authRoutes);
-app.use('/warehouse', warehouseRoutes);
-app.use('/products', productsRoute);
-app.use('/api/directions', directionsRoute);
+// ✅ Serve React frontend build (for production)
+const __dirname = path.resolve();
 
+// If your React app build is in project-root/build
+app.use(express.static(path.join(__dirname, "build")));
 
-app.listen(5001, () => {
-  console.log("DB password loaded:", typeof process.env.DB_PASSWORD);
-  console.log("🚀 Server running on http://localhost:5001");
+// Catch-all route for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

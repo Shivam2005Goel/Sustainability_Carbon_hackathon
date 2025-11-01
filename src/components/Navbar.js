@@ -43,7 +43,7 @@ function Navbar({ sidebarOpen, toggleSidebar, link_av }) {
             </Link>
             <Link
               className="navbar-brand text-white mx-3"
-              to="/about"
+              to="/"
               style={{
                 textDecoration: link_av === "Results" ? "underline" : "none",
               }}
@@ -52,7 +52,7 @@ function Navbar({ sidebarOpen, toggleSidebar, link_av }) {
             </Link>
             <Link
               className="navbar-brand text-white mx-3"
-              to="/updates"
+              to="/"
               style={{
                 textDecoration: link_av === "Updates" ? "underline" : "none",
               }}
@@ -61,7 +61,7 @@ function Navbar({ sidebarOpen, toggleSidebar, link_av }) {
             </Link>
             <Link
               className="navbar-brand text-white mx-3"
-              to="#"
+              to="/"
               style={{
                 textDecoration: link_av === "Help" ? "underline" : "none",
               }}
