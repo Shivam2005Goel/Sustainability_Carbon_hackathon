@@ -15,7 +15,7 @@ import {
 const Warehouses = () => {
   const dispatch = useDispatch();
 
-  const role = useSelector((state) => state.user.user); // e.g. "admin" or "manager"
+  const role = "admin" // e.g. "admin" or "manager"
   const username = useSelector((state) => state.user.username);
   const { warehouses, loading, error } = useSelector((state) => state.warehouse); // ← make sure your reducer name matches
 

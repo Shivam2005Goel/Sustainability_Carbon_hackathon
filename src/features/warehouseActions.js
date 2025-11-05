@@ -10,7 +10,7 @@ import {
 export const fetchWarehouses = () => async (dispatch) => {
   dispatch(getWarehousesStart());
   try {
-    const res = await fetch('http://localhost:5001/warehouse',{
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/warehouse`,{
       method: 'GET'
     });
     const data = await res.json();
@@ -26,7 +26,7 @@ export const fetchWarehouses = () => async (dispatch) => {
 // Add a new warehouse
 export const addWarehouse = (warehouseData) => async (dispatch) => {
   try {
-    const res = await fetch('http://localhost:5001/warehouse/addwarehouse', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/warehouse/addwarehouse`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export const addWarehouse = (warehouseData) => async (dispatch) => {
 export const fetchWarehousesByManager = (managerId) => async (dispatch) => {
   dispatch(getWarehousesStart());
   try {
-    const res = await fetch(`http://localhost:5001/warehouse/manager/${managerId}`,{
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/warehouse/manager/${managerId}`,{
         method: 'GET'
     });
     const data = await res.json();
@@ -63,7 +63,7 @@ export const fetchWarehousesByManager = (managerId) => async (dispatch) => {
 
 export const deleteWarehouse = (id) => async (dispatch) => {
   try {
-    const res = await fetch(`http://localhost:5001/warehouse/deletewarehouse/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/warehouse/deletewarehouse/${id}`, {
       method: 'DELETE',
     });
 

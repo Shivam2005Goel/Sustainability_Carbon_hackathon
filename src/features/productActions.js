@@ -11,7 +11,7 @@ import {
 export const fetchProducts = () => async (dispatch) => {
   dispatch(getProductStart());
   try {
-    const res = await fetch('http://localhost:5001/products', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products`, {
       method: 'GET',
     });
     const data = await res.json();
@@ -27,7 +27,7 @@ export const fetchProducts = () => async (dispatch) => {
 // ✅ Add a new product
 export const addProduct = (productData) => async (dispatch) => {
   try {
-    const res = await fetch('http://localhost:5001/products/addproduct', {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products/addproduct`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export const addProduct = (productData) => async (dispatch) => {
 export const fetchProductsByWarehouseId = (warehouseId) => async (dispatch) => {
   dispatch(getProductStart());
   try {
-    const res = await fetch(`http://localhost:5001/products/${warehouseId}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products/${warehouseId}`, {
       method: 'GET',
     });
     const data = await res.json();
@@ -65,7 +65,7 @@ export const fetchProductsByWarehouseId = (warehouseId) => async (dispatch) => {
 // ✅ Delete a product
 export const deleteProduct = (id) => async (dispatch) => {
   try {
-    const res = await fetch(`http://localhost:5001/products/deleteproduct/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products/deleteproduct/${id}`, {
       method: 'DELETE',
     });
 
@@ -83,7 +83,7 @@ export const deleteProduct = (id) => async (dispatch) => {
 export const updateProduct = (id, updatedFields) => async (dispatch) => {
   dispatch(getProductStart());
   try {
-    const res = await fetch(`http://localhost:5001/products/updateproduct/${id}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/products/updateproduct/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
