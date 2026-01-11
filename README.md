@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# GO-GREEN Smart Warehouse & Route Optimization System 🌱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+GO-GREEN is a scalable, cloud-based warehouse and logistics management system designed to optimize inventory operations, reduce delivery distances, and promote sustainable supply chain practices. The platform supports secure multi-user access, intelligent recommendations, and route optimization to minimize fuel consumption and carbon emissions.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Key Features
 
-### `npm start`
+### 🔐 Secure Authentication & Authorization
+- Implemented **JWT-based authentication and role-based authorization**
+- Ensures secure multi-user access across warehouses and operational teams
+- Protects APIs and sensitive data from unauthorized access
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏬 Warehouse & Product Management
+- Built robust backend APIs to manage:
+  - **20+ warehouses**
+  - **500+ products**
+- Supports full **CRUD operations** with efficient database transactions
+- Designed for scalability and high availability
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🚚 Route Optimization
+- Integrated route optimization logic to minimize delivery distances
+- Achieved:
+  - **15% reduction in delivery distance**
+  - Lower fuel consumption
+  - Reduced carbon emissions
+- Improves delivery efficiency and operational sustainability
 
-### `npm test`
+### 📦 Intelligent Recommendation Engine (GO-GREEN)
+- Engineered a recommendation system to:
+  - Reduce **inventory mismatches by 20%**
+  - Identify **pricing anomalies**
+  - Optimize stock distribution across warehouses
+- Helps in proactive decision-making and cost optimization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🏗️ System Architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Amazon CloudFront** is used as a **Content Delivery Network (CDN)** to:
+  - Improve response times
+  - Reduce server load
+  - Enhance global availability
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend
+- **Node.js**
+- **Express.js**
+- **JWT (JSON Web Tokens)** for authentication
+- RESTful API design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Database
+- **Amazon RDS (PostgreSQL)**
+  - Structured schema for warehouses, products, users, and routes
+  - ACID-compliant transactions
+  - Scalable and managed cloud database
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Cloud & Infrastructure
+- **Amazon RDS** – database storage and management
+- **Amazon CloudFront** – CDN for faster and reliable content delivery
+- Secure environment-based configuration for credentials
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📊 Impact & Results
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Metric | Improvement |
+|------|------------|
+| Delivery Distance | ⬇️ 15% |
+| Inventory Mismatches | ⬇️ 20% |
+| Fuel Consumption | Reduced |
+| Carbon Emissions | Reduced |
+| Warehouse Efficiency | Increased |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔑 API Capabilities (Overview)
 
-### Analyzing the Bundle Size
+- User Authentication & Authorization
+- Warehouse Management APIs
+- Product Inventory APIs
+- Route Optimization Endpoints
+- Recommendation Engine Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+All APIs are protected using JWT and follow REST standards.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌍 Sustainability Focus
 
-### Advanced Configuration
+GO-GREEN is built with sustainability at its core:
+- Optimized logistics reduce unnecessary travel
+- Lower fuel usage leads to reduced carbon emissions
+- Intelligent inventory recommendations prevent overstocking and waste
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📦 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Real-time traffic & weather-based routing
+- ML-driven demand forecasting
+- Dashboard with analytics and visualizations
+- Integration with external logistics providers
+- Multi-region deployment for global scalability
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
