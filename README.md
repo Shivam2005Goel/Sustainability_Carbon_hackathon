@@ -10,6 +10,9 @@ GO-GREEN is a scalable, cloud-based warehouse and logistics management system de
 - Implemented **JWT-based authentication and role-based authorization**
 - Ensures secure multi-user access across warehouses and operational teams
 - Protects APIs and sensitive data from unauthorized access
+  
+![Register/Login Page](./public/img1.jpg)
+
 
 ### 🏬 Warehouse & Product Management
 - Built robust backend APIs to manage:
@@ -18,6 +21,8 @@ GO-GREEN is a scalable, cloud-based warehouse and logistics management system de
 - Supports full **CRUD operations** with efficient database transactions
 - Designed for scalability and high availability
 
+![Dashboard](./public/img3.jpg)
+![Products](./public/img4.jpg)
 ### 🚚 Route Optimization
 - Integrated route optimization logic to minimize delivery distances
 - Achieved:
@@ -26,6 +31,8 @@ GO-GREEN is a scalable, cloud-based warehouse and logistics management system de
   - Reduced carbon emissions
 - Improves delivery efficiency and operational sustainability
 
+![Route Optimizer](./public/img2.jpg)
+
 ### 📦 Intelligent Recommendation Engine (GO-GREEN)
 - Engineered a recommendation system to:
   - Reduce **inventory mismatches by 20%**
@@ -33,7 +40,8 @@ GO-GREEN is a scalable, cloud-based warehouse and logistics management system de
   - Optimize stock distribution across warehouses
 - Helps in proactive decision-making and cost optimization
 
----
+![Intelligent Recommendation Engine](./public/img5.jpg)
+![Intelligent Recommendation Engine](./public/img6.jpg)
 
 ## 🏗️ System Architecture
 
